@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cats</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+<script>
+var Cat = function (x, y) {
+	this.x = x;
+	this.y = y; 
+	};
+	
+var drawCat = function (cat) {
+	var catHtml = '<img src = "http://i.kinja-img.com/gawker-media/image/upload/s--XxeU3pwd--/efg4piwisx1tcco4byit.png">';
+	var catElement = $(catHtml);
+	catElement.css({ position: "absolute",
+	left: cat.x,
+	top: cat.y
+	});
+
+$("body").append(catElement);
+};
+
+var grumpy = new Cat(20, 20);
+var yogi = new Cat(300, 200);
+drawCat(grumpy);
+
+</script>
+</body>
+</html>
